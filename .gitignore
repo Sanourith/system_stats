@@ -1,3 +1,6 @@
 # We don't want files into repository
-venv/*
 venv/
+.venv/
+
+__pycache__/
+*.pyc
