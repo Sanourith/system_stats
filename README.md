@@ -62,11 +62,23 @@ system_stats/
 ## TODO LIST
 ```txt
 make up
-  └── Terraform → crée les containers Docker (nœuds simulés)
-        └── Ansible → installe K3s + Prometheus + Grafana + ArgoCD
-              └── ArgoCD → détecte k8s/ dans le repo Git
-                    └── Déploie l'app Python (Helm chart)
-                          └── Prometheus scrape /metrics toutes les 15s
-                                └── Grafana affiche CPU/RAM/GPU en temps réel
-                                      └── Alertmanager → notif si CPU > 80%
+  └── Terraform → crée les containers Docker (nœuds simulés)                    = WIP
+        └── Ansible → installe K3s + Prometheus + Grafana + ArgoCD              = TODO
+              └── ArgoCD → détecte k8s/ dans le repo Git                        = TODO
+                    └── Déploie l'app Python (Helm chart)                       = TODO
+                          └── Prometheus scrape /metrics toutes les 15s         = TODO
+                                └── Grafana affiche CPU/RAM/GPU en temps réel   = TODO
+                                      └── Alertmanager → notif si CPU > 80%     = TODO
+```
+
+## LAUNCH THE APP
+
+```bash
+cd terraform/
+terraform init
+terraform plan -out "tf-plan"
+terraform apply "tf-plan"
+
+# Destroy the app
+terraform destroy "tf-plan"s
 ```
