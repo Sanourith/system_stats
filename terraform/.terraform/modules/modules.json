@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"k3s_node","Source":"./modules/k3s","Dir":"modules/k3s"},{"Key":"network","Source":"./modules/network","Dir":"modules/network"}]}
