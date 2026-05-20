@@ -4,8 +4,17 @@
 system_stats/
 │
 ├── terraform/                  # Provisionne l'infra Docker locale
+│   ├── modules/
+├   │   ├── k3s/
+├   │   │  ├── main.tf
+│   │   │  ├── variables.tf
+│   │   │  └── outputs.tf
+├   │   └── network/
+├   │      ├── main.tf
+│   │      ├── variables.tf
+│   │      └── outputs.tf
 │   ├── main.tf                 # Containers Docker (simulant des nœuds)
-│   ├── network.tf              # Réseau Docker dédié
+│   ├── versions.tf             # Réseau Docker dédié
 │   ├── variables.tf
 │   └── outputs.tf
 │
