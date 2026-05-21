@@ -8,6 +8,5 @@ variable "node_image" {
 }
 
 variable "network_name" {
-  description = "Nom du réseau Docker auquel rattacher le container"
-  type        = string
+  type = string
 }

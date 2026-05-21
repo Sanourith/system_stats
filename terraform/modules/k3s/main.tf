@@ -13,7 +13,7 @@ resource "docker_image" "this" {
 }
 
 resource "docker_container" "this" {
-  name  = "${var.project_name}-server"
+  name  = "${var.project_name}-k3s"
   image = docker_image.this.image_id
 
   networks_advanced {

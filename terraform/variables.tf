@@ -11,19 +11,42 @@ variable "project_name" {
 }
 
 variable "node_image" {
-  description = "Image Docker utilisée pour les nœuds"
+  description = "Image Docker pour le nœud K3s"
   type        = string
   default     = "ubuntu:22.04"
 }
 
 variable "network_subnet" {
-  description = "Subnet du réseau Docker interne"
-  type        = string
-  default     = "172.20.0.0/16"
+  type    = string
+  default = "172.20.0.0/16"
 }
 
 variable "network_gateway" {
-  description = "Gateway du réseau Docker interne"
+  type    = string
+  default = "172.20.0.1"
+}
+
+variable "postgres_image" {
+  description = "Image PostgreSQL sur ton DockerHub"
   type        = string
-  default     = "172.20.0.1"
+}
+
+variable "postgres_password" {
+  type      = string
+  sensitive = true
+}
+
+variable "postgres_db" {
+  type    = string
+  default = "infrawatch"
+}
+
+variable "postgres_user" {
+  type    = string
+  default = "infrawatch"
+}
+
+variable "app_image" {
+  description = "Image de l'app Python sur ton DockerHub"
+  type        = string
 }

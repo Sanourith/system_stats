@@ -10,3 +10,12 @@ tf-plan
 
 .terraform/*
 .terraform/
+
+terraform.tfvars
+
+# Terraform
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.backup
+terraform/tf-plan
+terraform/terraform.tfvars   # ← secrets, jamais commit
