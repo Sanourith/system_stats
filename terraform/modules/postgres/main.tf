@@ -12,7 +12,7 @@ resource "docker_image" "postgres" {
   keep_locally = true
 }
 
-resource "postgres_volume" "postgres_data" {
+resource "docker_volume" "postgres_data" {
   name = "${var.project_name}-postgres-data"
 }
 

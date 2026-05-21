@@ -10,7 +10,7 @@ module "network" {
   network_gateway = var.network_gateway
 }
 
-module "k3s_node" {
+module "k3s" {
   source = "./modules/k3s"
 
   providers = {
